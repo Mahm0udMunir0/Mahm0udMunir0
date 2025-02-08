@@ -1,3 +1,4 @@
+<center> [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=My+name+is+Mahmoud+Mounir+)](https://git.io/typing-svg)</center>
 # 💫 About Me:
 🏫 I'm currently studying in ... Delta Higher Institute for Management Information Systems,Egypt<br>🌱 I’m currently learning... eJPTv2<br>⚡ I’m looking to hunting on... hackerone and Bugcrowd<br>🔭 I’m currently working on... Not working<br>
 
