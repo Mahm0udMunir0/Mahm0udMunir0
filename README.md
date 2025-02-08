@@ -18,6 +18,8 @@
 
 ---
 [![](https://visitcount.itsvg.in/api?id=Mahm0udMunir0&icon=0&color=0)](https://visitcount.itsvg.in)
+![Snake animation](https://github.com/Mahm0udMunir0/Mahm0udMunir0/blob/output/dist/snake.svg)
+
 ![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
 <img src="https://tryhackme-badges.s3.amazonaws.com/x7c0dex0.png" alt="Your Image Badge" />
 
