@@ -2,36 +2,41 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 */12 * * *"
   workflow_dispatch:
 
 jobs:
   build:
+    permissions: 
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GH_TOKEN }}
-      
-      - uses: Platane/snk@v3
-        id: snake-gif
+          persist-credentials: false
+          token: ${{ secrets.SNAKE_TOKEN }}
+
+      - name: Generate Snake
+        uses: Platane/snk@v3
         with:
-          github_user_name: Mahm0udMunir0
+          github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
-            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
-          
-      - name: Push to GitHub
-        uses: EndBug/add-and-commit@v9
+        env:
+          GITHUB_TOKEN: ${{ secrets.SNAKE_TOKEN }}
+
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
         with:
+          github_token: ${{ secrets.SNAKE_TOKEN }}
           branch: main
-          message: '🐍 تحديث Snake Animation'
-          add: 'dist'
-          token: ${{ secrets.GH_TOKEN }}
-          
+          force: true
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GH_TOKEN }}
+          personal_token: ${{ secrets.SNAKE_TOKEN }}
           publish_dir: ./dist
+          publish_branch: output
+          force_orphan: true
