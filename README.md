@@ -46,9 +46,4 @@
 <img src="https://tryhackme-badges.s3.amazonaws.com/x7c0dex0.png" alt="Your Image Badge" />
 
 ![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
-### 👀 Visitor Count
-![Visitor Count](https://profile-counter.glitch.me/Mahm0udMunir0/count.svg)
----
-<div align="center">
-  <img src="https://github.com/Mahm0udMunir0/Mahm0udMunir0/blob/main/assets/footer.gif" alt="Footer" width="100%">
-</div>
+![Visitor Count](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMahm0udMunir0&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false)
