@@ -1,38 +1,61 @@
-name: Generate Snake Animation
+name: 🐍 Generate Ultimate Snake Animation
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */4 * * *"  # تحديث كل 4 ساعات
   workflow_dispatch:
+  push:
+    branches: [ main ]
 
 jobs:
   build:
+    name: Generate Ultimate Snake
+    runs-on: ubuntu-latest
     permissions: 
       contents: write
-    runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v3
         with:
           persist-credentials: false
           token: ${{ secrets.SNAKE_TOKEN }}
 
-      - name: Generate Snake
+      # إنشاء متعدد للأنماط
+      - name: Generate Ultimate Snake Collection
         uses: Platane/snk@v3
+        id: snake-gif
         with:
-          github_user_name: ${{ github.repository_owner }}
+          github_user_name: Mahm0udMunir0
           outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
+            # النمط الأساسي
+            dist/github-snake.svg?palette=github-light&color_snake=gradient:0,#238636,0.5,#2ea043,1,#39d353&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
+            
+            # النمط الداكن
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=gradient:0,#238636,0.5,#2ea043,1,#39d353&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
+            
+            # نمط المحيط
+            dist/ocean.gif?color_snake=gradient:0,#238636,0.5,#2ea043,1,#39d353&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
+            
+            # نمط النيون
+            dist/neon.svg?color_snake=gradient:0,#ff0080,0.5,#ff00ff,1,#00ffff&color_dots=#1a1b1e,#ff0080,#ff00ff,#00ffff,#00ff00
+            
+            # نمط الحرارة
+            dist/heatmap.svg?color_snake=gradient:0,#ff0000,0.5,#ff6b00,1,#ffd700&color_dots=#1a1b1e,#ff0000,#ff6b00,#ffd700,#ffff00
+            
+            # نمط السايبر
+            dist/cyber.svg?color_snake=gradient:0,#00ff00,0.5,#00ffff,1,#ff00ff&color_dots=#000000,#00ff00,#00ffff,#ff00ff,#ffffff
         env:
           GITHUB_TOKEN: ${{ secrets.SNAKE_TOKEN }}
 
+      # دفع التحديثات
       - name: Push Changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.SNAKE_TOKEN }}
-          branch: main
+          branch: output
           force: true
 
+      # نشر على GitHub Pages مع إعدادات متقدمة
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -40,3 +63,7 @@ jobs:
           publish_dir: ./dist
           publish_branch: output
           force_orphan: true
+          user_name: '🤖 Snake Animation Bot'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: '🎨 تحديث مجموعة Ultimate Snake Animation'
+          enable_jekyll: true
