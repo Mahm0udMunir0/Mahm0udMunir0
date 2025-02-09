@@ -21,7 +21,6 @@
 
 
 <div align="center">
-  <h2>🐍 Ultimate Snake Animation Collection</h2>
   
   <!-- Default Theme -->
   <picture>
@@ -30,17 +29,7 @@
     <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Mahm0udMunir0/Mahm0udMunir0/output/github-snake.svg" />
   </picture>
 
-  <!-- Neon Theme -->
-  <img width="100%" src="https://raw.githubusercontent.com/Mahm0udMunir0/Mahm0udMunir0/output/neon.svg" alt="Neon Snake Animation" />
-
-  <!-- Heatmap Theme -->
-  <img width="100%" src="https://raw.githubusercontent.com/Mahm0udMunir0/Mahm0udMunir0/output/heatmap.svg" alt="Heatmap Snake Animation" />
-
-  <!-- Cyber Theme -->
-  <img width="100%" src="https://raw.githubusercontent.com/Mahm0udMunir0/Mahm0udMunir0/output/cyber.svg" alt="Cyber Snake Animation" />
-
-  <!-- Ocean Animation -->
-  <img width="100%" src="https://raw.githubusercontent.com/Mahm0udMunir0/Mahm0udMunir0/output/ocean.gif" alt="Ocean Snake Animation" />
+  
 </div>
 <img src="https://tryhackme-badges.s3.amazonaws.com/x7c0dex0.png" alt="Your Image Badge" />
 <img src="https://www.hackthebox.com/badge/image/2120515" alt="Hack The Box Badge" />
