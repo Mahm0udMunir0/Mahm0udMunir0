@@ -2,7 +2,7 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 */6 * * *"  # تحديث كل 6 ساعات
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
       
       - uses: Platane/snk@v3
         id: snake-gif
@@ -26,9 +28,10 @@ jobs:
           branch: main
           message: '🐍 تحديث Snake Animation'
           add: 'dist'
+          token: ${{ secrets.GH_TOKEN }}
           
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./dist
