@@ -44,7 +44,7 @@
   />
 </div>
 <img src="https://tryhackme-badges.s3.amazonaws.com/x7c0dex0.png" alt="Your Image Badge" />
-  <img src="https://www.hackthebox.com/badge/image/2120515" alt="Hack The Box Badge" width="200" />
+![HTB Badge](https://www.hackthebox.com/badge/image/2120515)
 
 
 ![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
