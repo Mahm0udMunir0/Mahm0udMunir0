@@ -30,10 +30,5 @@
   </picture>
 
   
-</div>
-<img src="https://tryhackme-badges.s3.amazonaws.com/x7c0dex0.png" alt="Your Image Badge" />
-<img src="https://www.hackthebox.com/badge/image/2120515" alt="Hack The Box Badge" />
 
-![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
-![Visitor Count](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMahm0udMunir0&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false)
 
